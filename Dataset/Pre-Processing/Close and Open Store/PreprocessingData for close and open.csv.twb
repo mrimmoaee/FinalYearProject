@@ -1,0 +1,992 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1128.2033                               -->
+<workbook original-version='18.1' source-build='2018.3.1 (20183.18.1128.2033)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='PreprocessingData' inline='true' name='federated.0r8sozf1q84yl917rifgt06rl8hx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PreprocessingData' name='textscan.1jq3wzr0ar8ave1gte8631g3pvx8'>
+            <connection class='textscan' directory='D:/Semester 2 (Final)/FYP (Final)/Dataset/Rossman/Data_preprocessing' filename='PreprocessingData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Customers (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='2' formula='[Customers]' peg='0' size='159' />
+      </column>
+      <column datatype='integer' name='[Customers]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.502273' measure-ordering='alphabetic' measure-percentage='0.497727' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Malaysia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='PreprocessingData (2)' inline='true' name='federated.0rki89810f9i7j1e8jm4q0o8lqgs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PreprocessingData' name='textscan.1cnq4qt0q1ffci160ql2k1de2u6f'>
+            <connection class='textscan' directory='D:/Semester 2 (Final)/FYP (Final)/Dataset/Rossman/Data_preprocessing/Close and OPen' filename='PreprocessingData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1cnq4qt0q1ffci160ql2k1de2u6f' name='PreprocessingData.csv' table='[PreprocessingData#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_MY' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='integer' name='DayOfWeek' ordinal='1' />
+            <column datatype='date' name='Date' ordinal='2' />
+            <column datatype='integer' name='Sales' ordinal='3' />
+            <column datatype='integer' name='Customers' ordinal='4' />
+            <column datatype='integer' name='Open' ordinal='5' />
+            <column datatype='integer' name='Promo' ordinal='6' />
+            <column datatype='integer' name='StateHoliday' ordinal='7' />
+            <column datatype='integer' name='SchoolHoliday' ordinal='8' />
+            <column datatype='string' name='StoreType' ordinal='9' />
+            <column datatype='string' name='Assortment' ordinal='10' />
+            <column datatype='real' name='CompetitionDistance' ordinal='11' />
+            <column datatype='real' name='CompetitionOpenSinceMonth' ordinal='12' />
+            <column datatype='real' name='CompetitionOpenSinceYear' ordinal='13' />
+            <column datatype='integer' name='Promo2' ordinal='14' />
+            <column datatype='real' name='Promo2SinceWeek' ordinal='15' />
+            <column datatype='real' name='Promo2SinceYear' ordinal='16' />
+            <column datatype='string' name='PromoInterval' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;RM&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_MY&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DayOfWeek</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DayOfWeek]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>DayOfWeek</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customers]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Customers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Promo]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StateHoliday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StateHoliday]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>StateHoliday</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SchoolHoliday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SchoolHoliday]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>SchoolHoliday</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StoreType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StoreType]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>StoreType</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assortment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Assortment]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Assortment</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionDistance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionDistance]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionDistance</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionOpenSinceMonth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionOpenSinceMonth]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionOpenSinceMonth</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionOpenSinceYear</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionOpenSinceYear]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionOpenSinceYear</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Promo2]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2SinceWeek</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promo2SinceWeek]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2SinceWeek</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2SinceYear</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promo2SinceYear]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2SinceYear</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PromoInterval</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PromoInterval]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>PromoInterval</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Competition Distance' datatype='real' name='[CompetitionDistance]' role='measure' type='quantitative' />
+      <column caption='Competition Open Since Month' datatype='real' name='[CompetitionOpenSinceMonth]' role='dimension' type='quantitative' />
+      <column caption='Competition Open Since Year' datatype='real' name='[CompetitionOpenSinceYear]' role='dimension' type='quantitative' />
+      <column caption='Day Of Week' datatype='integer' name='[DayOfWeek]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[Promo2SinceWeek]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[Promo2SinceYear]' role='dimension' type='quantitative' />
+      <column caption='Promo Interval' datatype='string' name='[PromoInterval]' role='dimension' type='nominal' />
+      <column caption='School Holiday' datatype='integer' name='[SchoolHoliday]' role='measure' type='quantitative' />
+      <column caption='State Holiday' datatype='integer' name='[StateHoliday]' role='measure' type='quantitative' />
+      <column caption='Store Type' datatype='string' name='[StoreType]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.477223' measure-ordering='alphabetic' measure-percentage='0.522777' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Malaysia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='PreprocessingData (3)' inline='true' name='federated.0oejgup05ydkyw191lna216pd43a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PreprocessingData' name='textscan.0no6dwf0pen3uu10u9gdq126ba8e'>
+            <connection class='textscan' directory='D:/Semester 2 (Final)/FYP (Final)/Dataset/Rossman/Data_preprocessing/Close and OPen' filename='PreprocessingData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0no6dwf0pen3uu10u9gdq126ba8e' name='PreprocessingData.csv' table='[PreprocessingData#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_MY' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='integer' name='DayOfWeek' ordinal='1' />
+            <column datatype='date' name='Date' ordinal='2' />
+            <column datatype='integer' name='Sales' ordinal='3' />
+            <column datatype='integer' name='Customers' ordinal='4' />
+            <column datatype='integer' name='Open' ordinal='5' />
+            <column datatype='integer' name='Promo' ordinal='6' />
+            <column datatype='integer' name='StateHoliday' ordinal='7' />
+            <column datatype='integer' name='SchoolHoliday' ordinal='8' />
+            <column datatype='string' name='StoreType' ordinal='9' />
+            <column datatype='string' name='Assortment' ordinal='10' />
+            <column datatype='real' name='CompetitionDistance' ordinal='11' />
+            <column datatype='real' name='CompetitionOpenSinceMonth' ordinal='12' />
+            <column datatype='real' name='CompetitionOpenSinceYear' ordinal='13' />
+            <column datatype='integer' name='Promo2' ordinal='14' />
+            <column datatype='real' name='Promo2SinceWeek' ordinal='15' />
+            <column datatype='real' name='Promo2SinceYear' ordinal='16' />
+            <column datatype='string' name='PromoInterval' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;RM&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_MY&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DayOfWeek</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DayOfWeek]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>DayOfWeek</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customers]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Customers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Promo]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StateHoliday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StateHoliday]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>StateHoliday</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SchoolHoliday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SchoolHoliday]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>SchoolHoliday</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StoreType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StoreType]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>StoreType</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assortment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Assortment]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Assortment</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionDistance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionDistance]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionDistance</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionOpenSinceMonth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionOpenSinceMonth]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionOpenSinceMonth</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionOpenSinceYear</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionOpenSinceYear]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>CompetitionOpenSinceYear</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Promo2]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2SinceWeek</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promo2SinceWeek]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2SinceWeek</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promo2SinceYear</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promo2SinceYear]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>Promo2SinceYear</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PromoInterval</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PromoInterval]</local-name>
+            <parent-name>[PreprocessingData.csv]</parent-name>
+            <remote-alias>PromoInterval</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Competition Distance (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='3' formula='[CompetitionDistance]' peg='0' size='2585' />
+      </column>
+      <column caption='Competition Distance' datatype='real' name='[CompetitionDistance]' role='measure' type='quantitative' />
+      <column caption='Competition Open Since Month' datatype='real' name='[CompetitionOpenSinceMonth]' role='dimension' type='quantitative' />
+      <column caption='Competition Open Since Year' datatype='real' name='[CompetitionOpenSinceYear]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Customers (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='2' formula='[Customers]' peg='0' size='159' />
+      </column>
+      <column datatype='integer' name='[Customers]' role='measure' type='quantitative' />
+      <column caption='Day Of Week' datatype='integer' name='[DayOfWeek]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[Promo2SinceWeek]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[Promo2SinceYear]' role='dimension' type='quantitative' />
+      <column caption='Promo Interval' datatype='string' name='[PromoInterval]' role='dimension' type='nominal' />
+      <column caption='School Holiday' datatype='integer' name='[SchoolHoliday]' role='measure' type='quantitative' />
+      <column caption='State Holiday' datatype='integer' name='[StateHoliday]' role='measure' type='quantitative' />
+      <column caption='Store Type' datatype='string' name='[StoreType]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.572727' measure-ordering='alphabetic' measure-percentage='0.427273' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Malaysia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='PreprocessingData (3)' name='federated.0oejgup05ydkyw191lna216pd43a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0oejgup05ydkyw191lna216pd43a'>
+            <column datatype='integer' name='[Customers (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='2' formula='[Customers]' peg='0' size='159' />
+            </column>
+            <column datatype='integer' name='[Customers]' role='measure' type='quantitative' />
+            <column-instance column='[Customers]' derivation='Count' name='[cnt:Customers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Customers (bin)]' derivation='None' name='[none:Customers (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0oejgup05ydkyw191lna216pd43a].[none:Customers (bin):qk]' value='12' />
+            <format attr='font-weight' field='[federated.0oejgup05ydkyw191lna216pd43a].[none:Customers (bin):qk]' value='bold' />
+            <format attr='color' field='[federated.0oejgup05ydkyw191lna216pd43a].[none:Customers (bin):qk]' value='#000000' />
+            <format attr='font-size' field='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' value='12' />
+            <format attr='font-weight' field='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' value='bold' />
+            <format attr='color' field='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='107106.5' field='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' max='214213' min='0' symmetric='false' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#32708c</color>
+                <color>#3f7a94</color>
+                <color>#4e849d</color>
+                <color>#5e8fa5</color>
+                <color>#6f9aae</color>
+                <color>#82a6b6</color>
+                <color>#96b2bf</color>
+                <color>#abbfc7</color>
+                <color>#c1cbd0</color>
+                <color>#d9d9d9</color>
+                <color>#ee9b47</color>
+                <color>#ee8a43</color>
+                <color>#ed7846</color>
+                <color>#e96749</color>
+                <color>#df5a47</color>
+                <color>#d54c45</color>
+                <color>#cb3f42</color>
+                <color>#c12e3f</color>
+                <color>#b81840</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='auto' />
+            <format attr='color' value='#86bcb6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#333333' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]</rows>
+        <cols>[federated.0oejgup05ydkyw191lna216pd43a].[none:Customers (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0oejgup05ydkyw191lna216pd43a].[Customers (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='PreprocessingData (3)' name='federated.0oejgup05ydkyw191lna216pd43a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0oejgup05ydkyw191lna216pd43a'>
+            <column datatype='integer' name='[Competition Distance (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='3' formula='[CompetitionDistance]' peg='0' size='2585' />
+            </column>
+            <column caption='Competition Distance' datatype='real' name='[CompetitionDistance]' role='measure' type='quantitative' />
+            <column-instance column='[CompetitionDistance]' derivation='Count' name='[cnt:CompetitionDistance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Competition Distance (bin)]' derivation='None' name='[none:Competition Distance (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0oejgup05ydkyw191lna216pd43a].[cnt:CompetitionDistance:qk]</rows>
+        <cols>[federated.0oejgup05ydkyw191lna216pd43a].[none:Competition Distance (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0oejgup05ydkyw191lna216pd43a].[Competition Distance (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='72'>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0oejgup05ydkyw191lna216pd43a].[cnt:Customers:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5D512119-A488-4C5F-A76B-947A40D4CA22}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8B4E34BF-716F-4295-BFBB-6FC07E4E3348}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAW/UlEQVR4nO3dd3wUdf7H8de2bAopBNJISCEUQxUVBUREOQFR0ZPzQE8F62E57+T0znKe
+      iOV+emKleUr1QESp0okgvUtJqAECpJFKyqZstszvDzxwCTiUZHbNfJ6PBz4e+81k55M473xn
+      ZmfmY1AURUEInTJ6uwAhvEkCIHTNJwKgKAoul8vbZQCna3E4HN4u4wyp5fzqqxafCACc3vCE
+      0JrPBEAIb5AACF2TAAhdkwAIXZMACF2TAAhdM3u7gPqyceNGVj83Gj/F4DHu7NKKlyeP81JV
+      wtc1mgA4nU5S8qoJcntOahkJ1V6qSPwayC6Q0DUJgNA1CYDQNQmA0DUJgNA1CYDQtSsPgNvJ
+      nk2rmTptCmu2H8DlqGLpnJnMmL2Q0moHpSePMnP6VJas2YGrpow5i1eiuGtZOn8BNqdcAi28
+      68oD4KqB4Dge/MMDLJ46ni0rZ3LUfBXXxlQzfd4GZnw+kS597+H4mm/Yl13A0lXrOLB2AYeq
+      gwkyG9TfX4gGdOUfhFma0CYumC/GvE3bfkPI2z+HtncOISbYRPYP6zHkVxATEUb7hCbsPVJM
+      SdZ+PphZxr8+GoOB0x9gKYqC2+2+optinE7neccv5w4vX7k7DS78c3lDY6zligOgOG28O/od
+      bh/xEte3iWH73G3szcmjrGkWTSPjsdQeobSimhN5NpKvCSW8ZQqP9o7jm6WbGTG4F2az+cwt
+      kWbz5Zdzoe81GAxYLJaL/3l+CuGlfE9Dk1rOrz5queIAOCtO4WoSxt71y8hMa8GdA4ZzcOZX
+      LCWAYUOHYiiI5btvp+Pf5haubxXJni4d6XHnIA5NmkpxZXeaBzWaqzHEr5DBF54LVB8zwNq1
+      aym6/7W61wL1SOLZuZMvqRan0+kzf+kcDofUch71VYucBhW6JgEQuiYBELomARC6JgEQuiYB
+      ELomARC6JgEQuiYBELomARC61ugvxCk6cpQvhvzOc8zlZtin44iJifFSVcJXNPoABLlddLeV
+      e4wdqHX41CXPwntkF0jomgRA6JoEQOiazxwDbFy2hIITWR5jVYrCH0Y8hclk8lJVorHzmQAk
+      7t5K9I/bPMbW2+y4nnhSAiAajOwCCV2TAAhdkwAIXZMACF2TAAhdkwAIXZMACF2TAAhdkwAI
+      XZMACF2TAAhdkwAIXZMACF2TAAhdq4cAKFSW5jNv4SJqnW5c9gI+/+hTJk+ezO7DeZQXHmfW
+      l9NYsWE37ppyFixbheJ2sHLRImmSJ7xOPQDOSlb/sJnM9A289+EETpbXnLNALTu3bmP5klRq
+      XQq2o7vIC7qKRx99lC6tY/jvZ+Pp0GcQGakz2ZdTwHcrf+DQhoWkl1qlSZ7wOtUbYsqz0xk3
+      YwbNS45iCrOycMONPHl7558tYaVXv9tY88OW0y9D4mhh2MS7o14hpd8wTpwsJzaqKR0Sg9l7
+      uIiSrP2M+W8Zb3/wvkeTvAtxOp0YDOpBudSmaU6n84LN83zpiRGNsTFdfdCsSV5A0xhcx7aR
+      l9iXATFlRDYP/sXlrWHxPDz8Kgr3L+ezlWmEh/pTbqshJ7+ShK4hhLdM4aGeMcxL3c4Td/c4
+      0yTvggWazRfVCudS2ytd6H2lSd4va2y1qG41Tid0v2Ug9z/9KtGBTswWP88F7OXMmT+fCoed
+      OfMW0qtTImu37aaqys6wBx/A/1QCC7+ein9CL25IjmRXh6u46Z7fcnDiJIoru0mTPOFVqluf
+      0Wzm8LaVvDbawtB+XUnp2oPEqNCzC1hDGDzkYQYPOTuU3KHr2ReR3XiqXbczL5999AEAHn/m
+      2SuvXogrpHoQ7HLYSejUg0hTCatXrSK7qEKLuoTQhGoAAsNj6ZQUg6tJLH2uaU9IcJAWdQmh
+      CdUAVOSkMXHJHjrGWyg5vpUNace1qEsITVzEWaBYYtx5fPHFNBzOIMbdF6dFXUJoQjUA5qAI
+      Xnr9TdIOZBIa1YKE8AAt6hJCE6oBsOWm8+iIZ+jQ6fSZHWNoS6KuluMA0TioBiCwaSStW7fn
+      tttuAyA+MqTBixJCK6oBqCrOIzM7i4yMDAASu/Rq8KKE0Ir6B2F+VkxuJ3a7HQCny93gRQmh
+      FdXToOagKJ7/05OEBAcR36otzUPkIFg0HupngUxGVs6bTYkpnPz8TVx360At6hJCE+pngfIP
+      k6HE8t3U8cx441E2pZ2gc1yYFrWdl8vl4rO3XiQyyHPyOpxTTFsv1SR+vVQDEBzXnj7R1dxy
+      c29Coq9i3J9aa1HXBSmKQkThdvo2sXqMBxpqOfdWHSHUqAagurSIuBt/x9JRvTny4/fkFZSS
+      2CxQi9qEaHCqARj71l/4T+px1i6/nkO7t/HUmNn00KIyITSgGoC+dz1AYUgGv+1/M35Nnqdz
+      x1Za1CWEJlRPg3bp1gOLXxAn96zkhb/+jW1HirSoSwhNqM4AlcU57Nm9id22Wobe2oI9Gbnc
+      2DZSi9qEaHCqAQhp2Yl7enSAhF7EOU/QskuiBmU1vNQl8wkLC/UYswYGM+COu71UkfAG1QDY
+      bWUYAkOxZadxEIi212pQVsPrZltAC6Nn/+GVB5uBBEBXVI8BDAYjAYFBBAUFkb5xOceKq7So
+      SwhNqM4AiuKmymbDVgu1VZUUl9q0qEsITagGoLiwmMi4BCIxEd7sKQb0aKNFXUJoQnUX6K03
+      X6XLTXcwaNAg/PI2sWJHphZ1CaEJ1RmgXVQwo0a/Te/2EXy5aC/vD43Soi4hNKE6Azz75kTu
+      7Z5IaTWMmfQlXVs21aIuITTxizOAoigYrU244/fDMV7EE5qF+LX5xQAU709lwuI0/ILC+fvT
+      wzUqSQjt/GIAQiJj+X7WnzlUVMPqhbMAeOr1T7lbzgSJRuIXA+DXvD2Lly9j6fqdxDQLJSa5
+      EwnRcgwgGg/Vg2Crn5mvJ3zAtwuX8fjQwWzIqHs1qOJ2kXn0KC63gqIoZB7YxY/pGbgUcNVW
+      snPrJjJzi1Gcdg4dOQYoHMs4SI1LeoQJ71INQE3ZSSpCknnxhZHcfX0sh08UnrOEnRVzZvLK
+      qH9T7XCTl7acGakHyd25hDlr9jF/yliyKo3MHP8ROQW5vDd+MsVHtjJp7jpMclwtvEz1c4Am
+      sR14uFc8TzzyCHHte/JWnf1/K/3v+z3bdx4CYPvq1Vx32yt0DznMu9M3YMw/zsjhNxB0dDlb
+      DxRTmnuY98bNYcSrb2AxGlR7PZ3bI6wh+1QpioLT6fSpHmFSy/nVVy3q/YmMVu5/7nWGPOvG
+      aDSqNqwLDAqgosaO078Gs18AZosJp9NNVY0D/wALIZEJdIz3J+N4PknNEjGZTKo9wi61/9fl
+      MhgMZ3qWabVONVLL+dVXLeo9wuxV5JVU0DImirKiPNz+TWnaxP/sAvZy5syfR9qBfcyeu4A7
+      +g9h4qT/kGFxc8d9f8SUaWbaf8ZSVdWckW3DWRwUxJDHHuO10Z/Std1oIi6iR9jPQ3cxHSOv
+      lMFg0GQ9F0NqOb/6qkV169u6bCr/nLaR15//I9/PGEP0oDcYMbDL2QWsIQweMozBQ4adGXp9
+      1D/Ofr3tULr1P/ty3Dunv/buv9+54uKFuFKqB8Gb1v1AYdZRZs2ahb3FTdzVQx4/JRoP1Rng
+      L2+Mw/DROGwuI1BJdn4psU3l+aCicVCdAapLsli+OY2UlBRSUlIID/ZX+xYhfjVUZwCDXyDO
+      0hzWrluHAYhs1502sfJpsGgc1J8OHdCMZ597jmrH6ddRTaU9kmg8VANQW1HAt19No6gSCnKO
+      88LYa7iqZbgWtQnR4FQDEBTdjvGTZ+FWYO4nL2Mwqh42CPGrod4jrOAwL/79H5RUgdm/GS8P
+      b65FXUJoQv1aoJh2vP32O6zbspO4dtfRMV4OgEXjobo/U3vqOI89/jTHcgv51wtPkpqWq0Vd
+      QmhCNQCO6jJq/SPo3bsXXZLCKCip0KIuITShGgBLeGuev/9mxn/8Ma6k33Dn9cla1CWEJlQD
+      8M8Xnyal/yNMnjKFLgHZ/LDnhBZ1CaEJ1QAU5hzjZHE5LkcNJzKPYqtxaFGXEJpQPQv01OPD
+      ee6B23EbDLTo3I8vbvBul0gh6pNqAK4b+AgbBjxErVPBz8+Cb9wOIUT9uKh7ygxGM1a/hi5F
+      CO3JdQ1C1yQAQtd84xZ/H1F8qpQ3PxoPigI/u+G6XVwUQ+77nRcrEw1FAvAzJosfTZNS6ozb
+      KvK8UI3QguwCCV2TAAhdkwAIXZMACF2TAAhdkwAIXZMACF2TAAhdkwAIXZMACF2r9wC4XdXs
+      3LyZzZs3k1NYhstRTfquHZzIP4XiquXo8SxAISvzCHZpkie8rN4DUJPzI9MW/UhISAh+FjPf
+      TRvLwYIqpn36IXkFubzzyeecOraDiV+l4iPNRoSO1fvFcDabnUBrNatSV9F38INsSzvG8w+9
+      SGjWajbvL6L8ZCbvj/2GR196Hb+LaJLncrlwOBwer7XmdiseNWipMTamqw/aNcm7RM2v6sM7
+      r91CdtoyJn61AovZiMvlpsbuxGo1ExQeQ3KMP8dyikhuHq/aJM9kMnm9MZvxp+Z53tAYG9PV
+      B82a5F2qnPTNLN16gNL8E9w8YBjB+bVMnTgWW0UoL1zVjIUBQTz4xOO8POoTOr/5tk82yatb
+      gJfWS+NsTFcfNGuSd6ladu7Jk517/mwkie4Dz7767L3XARjzwbv1vWohLpmcBhW6JgEQuiYB
+      ELomARC6JgEQuuYbJ3V93MoN21iTftRjzK/WxhcfypmsXzsJwEUwBoViiW3jMebIPeylakR9
+      kl0goWsSAKFrEgChaxIAoWsSAKFrEgChaxIAoWs+/znA3979BIPxbE4Vt5sbvViPaFx8PgDH
+      DWEYjKYzrxVcEgBRb2QXSOiaz88Avqq21s7q1avrjEdHR5OSUrfLjPBNEoDLVFnr4r3v99UZ
+      7xV5kFclAL8aEoArYPSz1hkzGHzn0SFCnRwDCF2TAAhdkwAIXZMACF2Tg+B6tnbHbvb9bbTn
+      oOLm6d/2o2fPnuf/JuE1EoB6VmWwkm1p5jGmuJzYbDYvVSR+iewCCV1r8Bkgc/caFq5JwxgU
+      yR9/34cxUxfy0oghjP1kKo/8+VmamH3jYasN7T9fz+ebtTs8xq5OjOaZxx/xUkUCNJgBvpo5
+      l989MoLoinQ2HSnkyLETrJw1mbge/XWz8QNku6zscwR5/DtRXO7tsnSvwWeAiqpa/P3MNA+z
+      kF9goyRrP3MrW/DPQQkNvWqft3n3Pu798z/qjI+4ozf9+vXzQkX60+ABaBUbxrHcQnYfLqVf
+      72aEt0zhpQe6M37SHEaPfEDXByE1Rj/y/JrXGd+2ffuZZ987nU7MZjPh4eFce+21WpfY6DV4
+      AB56ZiTLlqzg+vueJiUuivt/eweJ13TjzopUTlU6aXYRDTL0Zn5aFgsKPX8vkeXZ3HzdzjrL
+      tk9oQXKrVnXGk5KSsFrrXqskPDX41ucfHME9Q/5w5nXfXjcA0L2PTPEXZDRhMFk8hvJr3Mw+
+      XPeYQUndCM1aeA5WlpEYasUvKNhjuF2YlXZtW5/zBj/959xuK0rdMZfLhclovKhlASKbN6f7
+      DdfXGb8UFosFi8WivuBlMii/1KBLA06nE0VRqNqfjrv0lMfXipxuciPiAc9fbnz1MaKCPHee
+      iqvduLLArHguW2Z1Ex1o8hircCuExBjwP+cgPNtmwtWsDYqieLTfKS4qxBTouTHZK8pQ/IPq
+      /jyV5eDfxHNQUXDXVGI4Z3ml2gbneQ+lxnbmPc7U8rMxD9XnGXfaUQwGMPl5jtecZ30uJ7jd
+      YDl32co6yyouJwaXE/z8VZcFoLwI7FV1xy9B69atSUpKqjPucrkwmUzn+Y5L4/UAwOn/yS6X
+      yycasPlSLXD2GMAXNMZafOYY1Gj0mVJ8phEcSC0XUl+1+MQMIIS3+M6fXSG8wKcCUFtZwsol
+      iziUXYyrtoo9aftRFCe7duzE0cDzlLOmjLT9p5/5n3UwnUKbnfKTRzmUXdKwK65D4Wj6NhYu
+      XkZRhZ2TmQfIKamksjib/Zknta3EZWfbuu9ZsGg5p6oclGRncCy/nOryfNIPndC0lv/JyTnK
+      /hPF2AoyOZRVQm3VKXbvO8Ll7sf4VACmfPxvQpI78fWEf3MsN5cpX37D4a1LWbEru0HP1zoq
+      8/lq8kQmTFsEwLq5M0jPzmP8uM+xBAY04JrrcpecIL3IwDXtInj/o4nsWPEtWzJymTJhPA6z
+      v/ob1CNnlY3g2DZ079iM0e+M59Cm7/h+13FmfzGeMkX7zxjcjirWTXyBRZsPkpe2ggXrM1g0
+      fQJ5NZe/dfhQAKrZn11N53YJpET4sy/nFHlHdvLJrPUMHzrgfKeZ640lKIqHhv2eMOv/fpHV
+      zJ74AWHXDCKxqbYBMIYnMLB7W1YtWkybLt0wYmfZlx9TFX8rneLCNK3FEtwM58kDTJo2l5tu
+      uxUDTtbOmUCmf1d6tI3StBZQ2LNqLkXNrv1pW1DYsnQq2yrjua1rwmVvHz4UAAsBZgW7U8FW
+      4yQ4wEJMcle6xfuxJyNP41oC6H/3XRzZtQWHW+NzBI5yXv/7yyTe+jCPDeqJASu33Hkv+Xs3
+      U+nQ/okTHXvcxhPD72fD0kU4MHNj/3upPLqd0hqntoW4qli+Lp2a0jx2bllHWbWbbn3uwnBy
+      L4U2x2W/rWnUqFGj6q/KK2Ek1FTOgqVrqQqIZmDPjqTty+SJJx5ixqQvua53L6zGhpkGKguO
+      8N/Z89mVdgBLaDQW20mirx9Ikj2NnaVN6ZBQ93qdhlJ8YBXTfzhGuLmKnBIXAY5CLK1upFtY
+      IWsyFa5u00L9TepJYWY6s+ct5sDho0QldyE+sJrKsM70aweLdxTSrWPdD6gajNGPXrf+hjbN
+      jVQ37UTHppXkGJIZcmNzvkrdT8+u7S7r1KicBhW65kO7QEJoTwIgdE0CIHRNAiB0TQIgGp+f
+      ruhVPb2jKBIAUf/crlr27drKph/34nS5L7hcZXEuB47k1vv6i4//yF9eeY/FMz5kc0bxTysr
+      4I3XxlD28wUVuzwYS9Q3henvjmTBPjut27UnLkxhc3oZvVP82Z5lpkOEja8Xr6XLTQPJXPoR
+      k9aU8M//e5uOTU4xZ/kW+gwaSkvTSRZvOUhZQSldOyexc18ej48YTu6u1axNz+fhIXcya94K
+      kiP9CW2ZzPpl3+Ef24kHBg/E3wRfT57EwPtf5tDUZ9iY68+OiAgeG9qXED8/qk4eZE7qDtyl
+      BVzdf4gEQNS3Er5dsJtPlq2iVVMLWTvmM2v+Adqawliwwcz6w7OxdehHx1o7sS1aENEilFYR
+      bv48/B/c98wjjBz5V/71xE1M+y6DG4OP8PnJPpj3TCf16q5MeX88nTp3Yc76NCZ8+AaBYcnc
+      1TuexXsdPD60PU4nYKpm975C7n0llkOAXbGwc97HzE9OYtWi1fS9qyWfTZ/LY32i+HDqAtkF
+      EvXNir+1lryCUmrtdtyKguJWfrr11cj9zz2PX+5Oxs9aQnKrJKLi2tAhNgCbEs3tAwdgddio
+      crpJbH8t17RPon23m2iXEE5laSF5BXlEx0QQH2LG7N+CL7+bw4PD/kj/9iGMHTuZ4qoaoIaa
+      Sn+sP93heV2vvnRJiaOk9OyjKaOSO/CbHp1wyzGAqH9NePnVP/HmM/dx+7CROAOiKNg9m/f/
+      uxKLn4H1qUvYvvcYYWGhtGjXheyNU3hvfib33BzEPXcOpsMtg4kMDsTfasHi54+f2YTVP5Dw
+      +PYMuiaRb+fMo9JlJKhZNGGBZjK2r2fF2i1YQ8IwGwFCiYytIa/QTpPIlsx4awSzd8OgHskE
+      BgVgMpoJ8LdiMPkRYLXIpRCi8dm24DNSTyXw8vABqsvKDCAanWvveIirIwzUqv1pd9fIDCD0
+      7f8Bm35VoLzE0F8AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
